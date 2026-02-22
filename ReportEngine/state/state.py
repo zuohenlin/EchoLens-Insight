@@ -16,18 +16,22 @@ class ReportMetadata:
     template_used: str = ""              # 使用的模板名称
     generation_time: float = 0.0         # 生成耗时（秒）
     timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
-    
+
+    # 新增：量化商业指标 (用于三创赛等需要明确商业价值的场景)
+    business_metrics: Dict[str, Any] = field(default_factory=dict)
+
     def to_dict(self) -> Dict[str, Any]:
         """转换为字典格式"""
         return {
             "query": self.query,
             "template_used": self.template_used,
             "generation_time": self.generation_time,
-            "timestamp": self.timestamp
+            "timestamp": self.timestamp,
+            "business_metrics": self.business_metrics
         }
 
 
-@dataclass 
+@dataclass
 class ReportState:
     """
     简化的报告状态管理。
@@ -38,18 +42,18 @@ class ReportState:
     task_id: str = ""                    # 任务ID
     query: str = ""                      # 原始查询
     status: str = "pending"              # 状态: pending, processing, completed, failed
-    
+
     # 输入数据
     query_engine_report: str = ""        # QueryEngine报告
-    media_engine_report: str = ""        # MediaEngine报告  
+    media_engine_report: str = ""        # MediaEngine报告
     insight_engine_report: str = ""      # InsightEngine报告
     forum_logs: str = ""                 # 论坛日志
-    
+
     # 处理结果
     selected_template: str = ""          # 选择的模板
     html_content: str = ""               # 最终HTML内容
-    
-    # 元数据
+
+    # 元数据 (包含商业量化指标)
     metadata: ReportMetadata = field(default_factory=ReportMetadata)
     
     def __post_init__(self):
