@@ -237,25 +237,34 @@ class TavilyNewsAgency:
     def __init__(self, api_key: Optional[str] = None):
         """
         初始化客户端。
-        优先读取环境变量 SEARCH_TOOL_TYPE (DuckDuckGo/Tavily)
-        如果无 API Key 且选择 Tavily，则自动降级为 DuckDuckGo
+        优先读取环境变量 SEARCH_TOOL_TYPE (DuckDuckGo/Tavily/AnspireAPI/BochaAPI)
+        QueryEngine 仅支持 DuckDuckGo 和 Tavily 后端；
+        AnspireAPI / BochaAPI 会自动映射到 DuckDuckGo（优先）或 Tavily。
         """
         self.engine_type = os.getenv("SEARCH_TOOL_TYPE", "DuckDuckGo")
         self._engine = None
-        
-        if self.engine_type.lower() == "duckduckgo":
+
+        # AnspireAPI / BochaAPI 在 QueryEngine 中无对应实现，
+        # 自动降级为 DuckDuckGo（免费，无需 Key）
+        normalized = self.engine_type.lower()
+        if normalized in ["anspireapi", "bochaapi"]:
+            print(f"QueryEngine 不支持 {self.engine_type}，自动使用 DuckDuckGo 作为替代搜索引擎...")
+            normalized = "duckduckgo"
+
+        if normalized == "duckduckgo":
             print("正在初始化 DuckDuckGo 免费搜索引擎...")
             try:
                 self._engine = DuckDuckGoSearchEngine()
+                self.engine_type = "DuckDuckGo"
             except ImportError as e:
                 print(f"DuckDuckGo 初始化失败: {e}")
                 print("尝试回退到 Tavily...")
-                self.engine_type = "Tavily"
-        
-        if self.engine_type.lower() in ["tavily", "anspire"]:
+                normalized = "tavily"
+
+        if normalized == "tavily":
             if api_key is None:
                 api_key = os.getenv("TAVILY_API_KEY")
-            
+
             if not api_key:
                 print("未找到 Tavily API Key，自动降级为 DuckDuckGo 免费搜索...")
                 try:
@@ -266,16 +275,23 @@ class TavilyNewsAgency:
             else:
                 try:
                     self._engine = TavilySearchEngine(api_key)
+                    self.engine_type = "Tavily"
                 except ImportError:
                     print("Tavily 库未安装，降级为 DuckDuckGo...")
-                    self._engine = DuckDuckGoSearchEngine()
-                    self.engine_type = "DuckDuckGo"
+                    try:
+                        self._engine = DuckDuckGoSearchEngine()
+                        self.engine_type = "DuckDuckGo"
+                    except ImportError:
+                        raise ValueError("无法初始化搜索引擎：Tavily 和 DuckDuckGo 均不可用")
 
         if self._engine is None:
-            # 默认尝试 DDG
-            self._engine = DuckDuckGoSearchEngine()
-            self.engine_type = "DuckDuckGo"
-        
+            # 最终兜底：尝试 DDG
+            try:
+                self._engine = DuckDuckGoSearchEngine()
+                self.engine_type = "DuckDuckGo"
+            except ImportError:
+                raise ValueError("无法初始化搜索引擎：请安装 duckduckgo-search>=5.0.0 或提供 TAVILY_API_KEY")
+
         print(f"搜索引擎已初始化: {self.engine_type}")
 
     def _search_internal(self, **kwargs) -> TavilyResponse:
