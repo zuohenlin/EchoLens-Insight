@@ -93,6 +93,9 @@ COPY .env.example .env
 # Copy application source
 COPY . .
 
+# Generate default config files from examples (these files are not committed to git)
+RUN cp /app/MindSpider/config.py.example /app/MindSpider/config.py 2>/dev/null || true
+
 # Ensure runtime directories exist even if ignored in build context
 RUN mkdir -p /ms-playwright logs final_reports insight_engine_streamlit_reports media_engine_streamlit_reports query_engine_streamlit_reports
 
