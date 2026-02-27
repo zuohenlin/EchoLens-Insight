@@ -1,11 +1,11 @@
-version: "3.9"
+﻿version: "3.9"
 
 services:
-  bettafish:
-    image: ghcr.io/666ghj/bettafish:latest
+  EchoLens-Insight:
+    image: ghcr.io/666ghj/EchoLens-Insight:latest
     # Speed up mirror
-    # image: ghcr.nju.edu.cn/666ghj/bettafish:latest
-    container_name: bettafish
+    # image: ghcr.nju.edu.cn/666ghj/EchoLens-Insight:latest
+    container_name: EchoLens-Insight
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
@@ -25,14 +25,14 @@ services:
 
   db:
     image: postgres:15
-    container_name: bettafish-db
+    container_name: EchoLens-Insight-db
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-bettafish}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bettafish}
-      POSTGRES_DB: ${POSTGRES_DB:-bettafish}
+      POSTGRES_USER: ${POSTGRES_USER:-EchoLens-Insight}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-EchoLens-Insight}
+      POSTGRES_DB: ${POSTGRES_DB:-EchoLens-Insight}
     ports:
       - "${POSTGRES_PORT:-5444}:5432"
     volumes:

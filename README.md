@@ -11,13 +11,13 @@
 
 </div>
 
-> **回声透镜 EchoLens-Insight**：基于 [BettaFish](https://github.com/666ghj/BettaFish) 构建的多智能体舆情分析系统
+> **回声透镜 EchoLens-Insight**：基于 [EchoLens-Insight](https://github.com/666ghj/EchoLens-Insight) 构建的多智能体舆情分析系统
 
 > 说明：联网爬虫/多平台搜索等能力为可选配置，不用于比赛主演示。
 
 ## ⚡ 项目概述
 
-**回声透镜 EchoLens-Insight**（基于 [BettaFish](https://github.com/666ghj/BettaFish)）是一个从0实现的创新型多智能体舆情分析系统。名称寓意"**透过回声洞察真相**"——像透镜一样捕捉消费者的声音，分析市场的回声，预测未来的走向，辅助决策。用户只需像聊天一样提出分析需求，智能体开始全自动分析国内奆30+主流社媒与数百万条大众评论。
+**回声透镜 EchoLens-Insight**（基于 [EchoLens-Insight](https://github.com/666ghj/EchoLens-Insight)）是一个从0实现的创新型多智能体舆情分析系统。名称寓意"**透过回声洞察真相**"——像透镜一样捕捉消费者的声音，分析市场的回声，预测未来的走向，辅助决策。用户只需像聊天一样提出分析需求，智能体开始全自动分析国内奆30+主流社媒与数百万条大众评论。
 
 查看系统以“武汉大学舆情”为例，生成的研究报告：[武汉大学品牌声誉深度分析报告](./final_reports/final_report__20250827_131630.html)
 

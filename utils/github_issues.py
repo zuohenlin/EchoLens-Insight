@@ -1,4 +1,4 @@
-"""
+﻿"""
 GitHub Issues 工具模块
 
 提供创建 GitHub Issues URL 和显示带链接的错误信息的功能
@@ -10,7 +10,7 @@ from datetime import datetime
 from urllib.parse import quote
 
 # GitHub 仓库信息
-GITHUB_REPO = "666ghj/BettaFish"
+GITHUB_REPO = "666ghj/EchoLens-Insight"
 GITHUB_ISSUES_URL = f"https://github.com/{GITHUB_REPO}/issues/new"
 
 

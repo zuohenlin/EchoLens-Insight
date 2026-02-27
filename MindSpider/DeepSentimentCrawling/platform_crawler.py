@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 DeepSentimentCrawling模块 - 平台爬虫管理器
@@ -54,11 +54,11 @@ class PlatformCrawler:
                 content = f.read()
             
             # PostgreSQL配置值：如果使用PostgreSQL则使用MindSpider配置，否则使用默认值或环境变量
-            pg_password = config.settings.DB_PASSWORD if is_postgresql else "bettafish"
-            pg_user = config.settings.DB_USER if is_postgresql else "bettafish"
+            pg_password = config.settings.DB_PASSWORD if is_postgresql else "EchoLens-Insight"
+            pg_user = config.settings.DB_USER if is_postgresql else "EchoLens-Insight"
             pg_host = config.settings.DB_HOST if is_postgresql else "127.0.0.1"
             pg_port = config.settings.DB_PORT if is_postgresql else 5444
-            pg_db_name = config.settings.DB_NAME if is_postgresql else "bettafish"
+            pg_db_name = config.settings.DB_NAME if is_postgresql else "EchoLens-Insight"
             
             # 替换数据库配置 - 使用MindSpider的数据库配置
             new_config = f'''# 声明：本代码仅供学习和研究目的使用。使用者应遵守以下原则：  

@@ -22,7 +22,7 @@
 
 </div>
 
-> EchoLens Insight (based on BettaFish)
+> EchoLens Insight (based on EchoLens-Insight)
 
 > Note: Online crawling/multi-platform search features are optional and not used in the competition main demo.
 
@@ -35,7 +35,7 @@
 
 ## ⚡ Project Overview
 
-**EchoLens Insight (based on BettaFish)** is an innovative multi-agent public opinion analysis system built from scratch. It helps break information cocoons, restore the original public sentiment, predict future trends, and assist decision-making. Users only need to raise analysis needs like chatting; the agents automatically analyze 30+ mainstream social platforms at home and abroad and millions of public comments.
+**EchoLens Insight (based on EchoLens-Insight)** is an innovative multi-agent public opinion analysis system built from scratch. It helps break information cocoons, restore the original public sentiment, predict future trends, and assist decision-making. Users only need to raise analysis needs like chatting; the agents automatically analyze 30+ mainstream social platforms at home and abroad and millions of public comments.
 
 > Betta is a small yet combative and beautiful fish, symbolizing "small but powerful, fearless of challenges".
 
@@ -65,7 +65,7 @@ Beyond just report quality, compared to similar products, we have 🚀 six major
 >
 > Here's a relatively active Linux.do project discussion thread: https://linux.do/t/topic/1009280
 >
-> Check out the comparison by a Linux.do fellow: [Open Source Project (BettaFish) vs manus|minimax|ChatGPT Comparison](https://linux.do/t/topic/1148040)
+> Check out the comparison by a Linux.do fellow: [Open Source Project (EchoLens-Insight) vs manus|minimax|ChatGPT Comparison](https://linux.do/t/topic/1148040)
 
 <div align="center">
 <img src="static/image/system_schematic.png" alt="banner" width="800">
