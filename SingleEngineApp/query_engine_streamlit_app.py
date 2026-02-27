@@ -98,15 +98,13 @@ def main():
         if not settings.QUERY_ENGINE_API_KEY:
             st.error("请在您的环境变量中设置QUERY_ENGINE_API_KEY")
             return
-        # 仅在 Tavily 模式下强制校验 TAVILY_API_KEY
-        if settings.SEARCH_TOOL_TYPE and settings.SEARCH_TOOL_TYPE.lower() == "tavily":
-            if not settings.TAVILY_API_KEY:
-                st.error("请在您的环境变量中设置TAVILY_API_KEY（当前搜索模式为Tavily）")
-                return
+        if not settings.TAVILY_API_KEY:
+            st.error("请在您的环境变量中设置TAVILY_API_KEY")
+            return
 
         # 自动使用配置文件中的API密钥
         engine_key = settings.QUERY_ENGINE_API_KEY
-        tavily_key = settings.TAVILY_API_KEY  # 非 Tavily 模式下可为空
+        tavily_key = settings.TAVILY_API_KEY
 
         # 创建配置
         config = Settings(

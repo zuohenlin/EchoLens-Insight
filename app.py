@@ -508,9 +508,9 @@ forum_monitor_thread.start()
 
 # 全局变量存储进程信息
 processes = {
-    'insight': {'process': None, 'port': 8501, 'status': 'stopped', 'output': [], 'log_file': None},
-    'media': {'process': None, 'port': 8502, 'status': 'stopped', 'output': [], 'log_file': None},
-    'query': {'process': None, 'port': 8503, 'status': 'stopped', 'output': [], 'log_file': None},
+    'insight': {'process': None, 'port': 8501, 'status': 'stopped', 'output': [], 'log_file': None, 'healthcheck_started_at': None},
+    'media': {'process': None, 'port': 8502, 'status': 'stopped', 'output': [], 'log_file': None, 'healthcheck_started_at': None},
+    'query': {'process': None, 'port': 8503, 'status': 'stopped', 'output': [], 'log_file': None, 'healthcheck_started_at': None},
     'forum': {'process': None, 'port': None, 'status': 'stopped', 'output': [], 'log_file': None}  # 启动后标记为 running
 }
 
@@ -699,6 +699,7 @@ def start_streamlit_app(app_name, script_path, port):
         processes[app_name]['process'] = process
         processes[app_name]['status'] = 'starting'
         processes[app_name]['output'] = []
+        processes[app_name]['healthcheck_started_at'] = time.time()
         
         # 启动输出读取线程
         output_thread = threading.Thread(
@@ -743,6 +744,7 @@ def stop_streamlit_app(app_name):
         
         processes[app_name]['process'] = None
         processes[app_name]['status'] = 'stopped'
+        processes[app_name]['healthcheck_started_at'] = None
         
         return True, f"{app_name} 应用已停止"
         
@@ -752,10 +754,25 @@ def stop_streamlit_app(app_name):
 
 HEALTHCHECK_PATH = "/_stcore/health"
 HEALTHCHECK_PROXIES = {'http': None, 'https': None}
+HEALTHCHECK_GRACE_SECONDS = 15
 
 
 def _build_healthcheck_url(port):
     return f"http://127.0.0.1:{port}{HEALTHCHECK_PATH}"
+
+
+def _healthcheck_grace_active(app_name: str) -> bool:
+    started_at = processes.get(app_name, {}).get('healthcheck_started_at')
+    if not started_at:
+        return False
+    return (time.time() - started_at) < HEALTHCHECK_GRACE_SECONDS
+
+
+def _log_healthcheck_failure(app_name: str, exc: Exception):
+    if _healthcheck_grace_active(app_name):
+        logger.debug(f"正在启动{app_name}，请等待")
+        return
+    logger.warning(f"{app_name} 健康检查失败: {exc}")
 
 
 def check_app_status():
@@ -775,12 +792,13 @@ def check_app_status():
                     else:
                         info['status'] = 'starting'
                 except Exception as exc:
-                    logger.warning(f"{app_name} 健康检查失败: {exc}")
+                    _log_healthcheck_failure(app_name, exc)
                     info['status'] = 'starting'
             else:
                 # 进程已结束
                 info['process'] = None
                 info['status'] = 'stopped'
+                info['healthcheck_started_at'] = None
 
 def wait_for_app_startup(app_name, max_wait_time=90):
     """等待应用启动完成"""
@@ -804,7 +822,7 @@ def wait_for_app_startup(app_name, max_wait_time=90):
                 info['status'] = 'running'
                 return True, "启动成功"
         except Exception as exc:
-            logger.warning(f"{app_name} 健康检查失败: {exc}")
+            _log_healthcheck_failure(app_name, exc)
 
         time.sleep(1)
 
@@ -1163,7 +1181,7 @@ def search():
     
     # 向运行中的应用发送搜索请求
     results = {}
-    api_ports = {'insight': 8601, 'media': 8602, 'query': 8603}
+    api_ports = {'insight': 8501, 'media': 8502, 'query': 8503}
     
     for app_name in running_apps:
         try:

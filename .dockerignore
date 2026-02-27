@@ -10,3 +10,17 @@ __pycache__
 *.sqlite3
 .DS_Store
 Thumbs.db
+
+# 敏感配置文件 - 绝不打包进镜像（通过运行时环境变量注入）
+.env
+.env.local
+utils/.env
+utils/.env.local
+MindSpider/config.py
+
+# 运行时产物
+logs/
+final_reports/
+insight_engine_streamlit_reports/
+media_engine_streamlit_reports/
+query_engine_streamlit_reports/

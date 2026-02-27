@@ -1312,7 +1312,7 @@ def export_pdf(task_id: str):
                 'success': False,
                 'error': 'PDF 导出功能不可用：缺少系统依赖',
                 'details': '请查看根目录 README.md “源码启动”的第二步（PDF 导出依赖）了解安装方法',
-                'help_url': 'https://github.com/zuohenlin/EchoLens-Insight#2-安装-pdf-导出所需系统依赖可选',
+                'help_url': 'https://github.com/666ghj/BettaFish#2-安装-pdf-导出所需系统依赖可选',
                 'system_message': pango_message
             }), 503
 
@@ -1401,7 +1401,7 @@ def export_pdf_from_ir():
                 'success': False,
                 'error': 'PDF 导出功能不可用：缺少系统依赖',
                 'details': '请查看根目录 README.md “源码启动”的第二步（PDF 导出依赖）了解安装方法',
-                'help_url': 'https://github.com/zuohenlin/EchoLens-Insight#2-安装-pdf-导出所需系统依赖可选',
+                'help_url': 'https://github.com/666ghj/BettaFish#2-安装-pdf-导出所需系统依赖可选',
                 'system_message': pango_message
             }), 503
 

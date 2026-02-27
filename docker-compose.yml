@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  echolens:
-    image: ghcr.io/666ghj/echolens:latest
+  bettafish:
+    image: ghcr.io/666ghj/bettafish:latest
     # Speed up mirror
-    # image: ghcr.nju.edu.cn/666ghj/echolens:latest
-    container_name: echolens
+    # image: ghcr.nju.edu.cn/666ghj/bettafish:latest
+    container_name: bettafish
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
@@ -25,14 +25,14 @@ services:
 
   db:
     image: postgres:15
-    container_name: echolens-db
+    container_name: bettafish-db
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-echolens}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-echolens}
-      POSTGRES_DB: ${POSTGRES_DB:-echolens}
+      POSTGRES_USER: ${POSTGRES_USER:-bettafish}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bettafish}
+      POSTGRES_DB: ${POSTGRES_DB:-bettafish}
     ports:
       - "${POSTGRES_PORT:-5444}:5432"
     volumes:

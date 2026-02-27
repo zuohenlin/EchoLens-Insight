@@ -34,7 +34,6 @@ from .nodes import (
     ChapterValidationError,
     DocumentLayoutNode,
     WordBudgetNode,
-    BusinessMetricsNode, # 引入商业量化指标生成节点
 )
 from .renderers import HTMLRenderer
 from .state import ReportState

@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 # 添加项目路径到sys.path
-sys.path.insert(0, '/Users/mayiding/Desktop/GitMy/EchoLens-Insight')
+sys.path.insert(0, '/Users/mayiding/Desktop/GitMy/BettaFish')
 
 def export_pdf(ir_file_path):
     """导出PDF"""
@@ -32,7 +32,7 @@ def export_pdf(ir_file_path):
 
         # 确定输出文件名
         topic = document_ir.get('metadata', {}).get('topic', 'report')
-        output_dir = Path('/Users/mayiding/Desktop/GitMy/EchoLens-Insight/final_reports/pdf')
+        output_dir = Path('/Users/mayiding/Desktop/GitMy/BettaFish/final_reports/pdf')
         output_dir.mkdir(parents=True, exist_ok=True)
 
         pdf_filename = f"report_{topic}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
@@ -57,7 +57,7 @@ def export_pdf(ir_file_path):
 
 if __name__ == "__main__":
     # 使用最新的报告文件
-    latest_report = "/Users/mayiding/Desktop/GitMy/EchoLens-Insight/final_reports/ir/report_ir_人工智能行情发展走势_20251119_235407.json"
+    latest_report = "/Users/mayiding/Desktop/GitMy/BettaFish/final_reports/ir/report_ir_人工智能行情发展走势_20251119_235407.json"
 
     if os.path.exists(latest_report):
         print("="*50)
