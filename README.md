@@ -2,10 +2,10 @@
 
 <img src="static/image/echolens_logo.png" alt="回声透镜 EchoLens-Insight" width="50%">
 
-[![GitHub Stars](https://img.shields.io/github/stars/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/network)
-[![GitHub Issues](https://img.shields.io/github/issues/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/issues)
-[![GitHub License](https://img.shields.io/github/license/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/network)
+[![GitHub Issues](https://img.shields.io/github/issues/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/issues)
+[![GitHub License](https://img.shields.io/github/license/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/blob/main/LICENSE)
 
 [English](./README-EN.md) | [中文文档](./README.md)
 
@@ -722,17 +722,17 @@ class DeepSearchAgent:
 
 ### 获取帮助
 
-- **项目主页**：[GitHub仓库](https://github.com/zuohenlin/EchoLens-Insight)
-- **问题反馈**：[Issues页面](https://github.com/zuohenlin/EchoLens-Insight/issues)
-- **功能建议**：[Discussions页面](https://github.com/zuohenlin/EchoLens-Insight/discussions)
+- **项目主页**：[GitHub仓库](https://github.com/fulaoaz/EchoLens-Insight)
+- **问题反馈**：[Issues页面](https://github.com/fulaoaz/EchoLens-Insight/issues)
+- **功能建议**：[Discussions页面](https://github.com/fulaoaz/EchoLens-Insight/discussions)
 
 ## 📈 项目统计
 
-<a href="https://www.star-history.com/#zuohenlin/EchoLens-Insight&type=date&legend=top-left">
+<a href="https://www.star-history.com/#fulaoaz/EchoLens-Insight&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&legend=top-left" />
  </picture>
 </a>
 

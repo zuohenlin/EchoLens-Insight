@@ -362,7 +362,7 @@ python main.py --deep-sentiment --platforms zhihu --test
 
 ### 其他问题
 
-https://github.com/zuohenlin/EchoLens-Insight/issues/185
+https://github.com/fulaoaz/EchoLens-Insight/issues/185
 
 ### 爬取参数调整
 

@@ -2,19 +2,19 @@
 
 <img src="static/image/echolens_logo.png" alt="EchoLens-Insight" width="50%">
 
-<a href="https://trendshift.io/repositories/15286" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15286" alt="zuohenlin%2FEchoLens-Insight | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<a href="https://trendshift.io/repositories/15286" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15286" alt="fulaoaz%2FEchoLens-Insight | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-<a href="https://open.anspire.cn/?share_code=3E1FUOUH" target="_blank"><img src="./static/image/logo_anspire.png" alt="zuohenlin%2FEchoLens-Insight | Trendshift" height="40"/></a>&ensp;
-<a href="https://www.thordata.com/?ls=github&lk=EchoLens-Insight" target="_blank"><img src="./static/image/logo_thordata.png" alt="zuohenlin%2FEchoLens-Insight | Trendshift" height="40"/></a>
+<a href="https://open.anspire.cn/?share_code=3E1FUOUH" target="_blank"><img src="./static/image/logo_anspire.png" alt="fulaoaz%2FEchoLens-Insight | Trendshift" height="40"/></a>&ensp;
+<a href="https://www.thordata.com/?ls=github&lk=EchoLens-Insight" target="_blank"><img src="./static/image/logo_thordata.png" alt="fulaoaz%2FEchoLens-Insight | Trendshift" height="40"/></a>
 
-[![GitHub Stars](https://img.shields.io/github/stars/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/stargazers)
-[![GitHub Watchers](https://img.shields.io/github/watchers/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/watchers)
-[![GitHub Forks](https://img.shields.io/github/forks/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/network)
-[![GitHub Issues](https://img.shields.io/github/issues/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/stargazers)
+[![GitHub Watchers](https://img.shields.io/github/watchers/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/watchers)
+[![GitHub Forks](https://img.shields.io/github/forks/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/network)
+[![GitHub Issues](https://img.shields.io/github/issues/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/pulls)
 
-[![GitHub License](https://img.shields.io/github/license/zuohenlin/EchoLens-Insight?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight/blob/main/LICENSE)
-[![Version](https://img.shields.io/badge/version-v1.2.1-green.svg?style=flat-square)](https://github.com/zuohenlin/EchoLens-Insight)
+[![GitHub License](https://img.shields.io/github/license/fulaoaz/EchoLens-Insight?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-v1.2.1-green.svg?style=flat-square)](https://github.com/fulaoaz/EchoLens-Insight)
 [![Docker](https://img.shields.io/badge/Docker-Build-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
 
 
@@ -76,12 +76,12 @@ Say goodbye to traditional data dashboards. In "WeiYu", everything starts with a
 ## 🪄 Sponsors
 
 <details>
-<summary>Provider of core agent capabilities including AI web search, file parsing, and web content scraping: <span style="margin-left: 10px"><a href="https://open.anspire.cn/?share_code=3E1FUOUH" target="_blank"><img src="./static/image/logo_anspire.png" alt="zuohenlin%2FEchoLens-Insight | Trendshift" height="50"/></a></span></summary>
+<summary>Provider of core agent capabilities including AI web search, file parsing, and web content scraping: <span style="margin-left: 10px"><a href="https://open.anspire.cn/?share_code=3E1FUOUH" target="_blank"><img src="./static/image/logo_anspire.png" alt="fulaoaz%2FEchoLens-Insight | Trendshift" height="50"/></a></span></summary>
 Anspire Open is a leading infrastructure provider for the agent era. We offer developers the core capability stack needed to build powerful agents. Currently available services include AI web search (multiple versions, highly competitive pricing), file parsing (limited-time free), web content scraping (limited-time free), cloud browser automation (Anspire Browser Agent, in beta), multi-turn rewriting, and more. We continue to provide a solid foundation for agents to connect and operate in complex digital worlds. Seamlessly integrates with mainstream agent platforms such as Dify, Coze, and Yuanqi. Through a transparent credit-based billing system and modular design, we provide enterprises with efficient, low-cost customized support to accelerate intelligent transformation.
 </details>
 
 <details>
-<summary>Claim 1GB free trial, enterprise-grade global proxy IP and Scraper API solution provider, register now: <span style="margin-left: 10px"><a href="https://www.thordata.com/?ls=github&lk=EchoLens-Insight" target="_blank"><img src="./static/image/logo_thordata.png" alt="zuohenlin%2FEchoLens-Insight | Trendshift" height="40"/></a></span></summary>
+<summary>Claim 1GB free trial, enterprise-grade global proxy IP and Scraper API solution provider, register now: <span style="margin-left: 10px"><a href="https://www.thordata.com/?ls=github&lk=EchoLens-Insight" target="_blank"><img src="./static/image/logo_thordata.png" alt="fulaoaz%2FEchoLens-Insight | Trendshift" height="40"/></a></span></summary>
 <img src="static/image/banner_thordata.png" height="250" alt="banner">
 Thordata helps enterprises easily access publicly available web data through highly reliable proxy networks and automated scraping solutions, with a commitment to 99.9% uptime and 99.7% success rate.
 </details>
@@ -767,11 +767,11 @@ This project is licensed under the [GPL-2.0 License](LICENSE). Please see the LI
 
 ### Get Help
 
-  FAQ: https://github.com/zuohenlin/EchoLens-Insight/issues/185
+  FAQ: https://github.com/fulaoaz/EchoLens-Insight/issues/185
 
-- **Project Homepage**: [GitHub Repository](https://github.com/zuohenlin/EchoLens-Insight)
-- **Issue Reporting**: [Issues Page](https://github.com/zuohenlin/EchoLens-Insight/issues)
-- **Feature Requests**: [Discussions Page](https://github.com/zuohenlin/EchoLens-Insight/discussions)
+- **Project Homepage**: [GitHub Repository](https://github.com/fulaoaz/EchoLens-Insight)
+- **Issue Reporting**: [Issues Page](https://github.com/fulaoaz/EchoLens-Insight/issues)
+- **Feature Requests**: [Discussions Page](https://github.com/fulaoaz/EchoLens-Insight/discussions)
 
 ### Contact Information
 
@@ -788,7 +788,7 @@ This project is licensed under the [GPL-2.0 License](LICENSE). Please see the LI
 
 Thanks to these excellent contributors:
 
-[![Contributors](https://contrib.rocks/image?repo=zuohenlin/EchoLens-Insight)](https://github.com/zuohenlin/EchoLens-Insight/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=fulaoaz/EchoLens-Insight)](https://github.com/fulaoaz/EchoLens-Insight/graphs/contributors)
 
 ## 🌟 Join Our Official Community
 
@@ -799,11 +799,11 @@ Thanks to these excellent contributors:
 
 ## 📈 Project Statistics
 
-<a href="https://www.star-history.com/#zuohenlin/EchoLens-Insight&type=date&legend=top-left">
+<a href="https://www.star-history.com/#fulaoaz/EchoLens-Insight&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zuohenlin/EchoLens-Insight&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=fulaoaz/EchoLens-Insight&type=date&legend=top-left" />
  </picture>
 </a>
 
